@@ -25,9 +25,17 @@ namespace Apollo_Hoster.Class
 
         public void Start()
         {
-            string word = "[BACKEND] Started listening on " + Globals.Port;
-            Fortnite.Logger(word);
-            listenerThread.Start();
+            if (Globals.bAreRequestsEnabled == true) 
+            {
+                string word = "[BACKEND] Started listening on " + Globals.Port;
+                Fortnite.Logger(word);
+                listenerThread.Start();
+            }
+            else
+            {
+                string word = "[BACKEND] Currently disabled";
+                Fortnite.Logger(word);
+            }
         }
 
         public void Stop()
@@ -134,7 +142,7 @@ namespace Apollo_Hoster.Class
                     Fortnite.Logger("[BACKEND] Received a request for /EUSOLO.");
                     System.Windows.MessageBox.Show("eu solo gaz");
 
-                    // ADD THE FUCKING THING TO START THE EU SOLO HERE
+                    // ADD THE FUCKING THING TO START THE EU SOLO HERE //preciate it pyth
                 });
             }
 

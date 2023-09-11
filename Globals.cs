@@ -8,11 +8,11 @@ namespace Apollo_Hoster
         public static string Port = "3551";
         public static string Domain = $"http://{Globals.Address}:{Globals.Port}/"; //do NOT mess with this
 
-        public static bool bAreRequestsEnabled = true;
+        public static bool bAreRequestsEnabled = true; //disable backend chat
 
         public class Gameserver
         {
-            public static bool bIsMCPEnabled = true;
+            public static bool bIsMCPEnabled = true; //not done
             public static bool disableRestarting_enableMoreServers = false; //this stops the autohoster from restarting the current games and continues starting new matches
             public static string howLongBetween = "5m"; //if you have disableRestarting_enableMoreServers = true, it will start a game every x amount of minutes, seconds, hours, etc. 
         }
