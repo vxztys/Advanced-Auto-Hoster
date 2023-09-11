@@ -140,7 +140,6 @@ namespace Apollo_Hoster.Class
                 System.Windows.Application.Current.Dispatcher.Invoke(() =>
                 {
                     Fortnite.Logger("[BACKEND] Received a request for /EUSOLO.");
-                    System.Windows.MessageBox.Show("eu solo gaz");
 
                     // ADD THE FUCKING THING TO START THE EU SOLO HERE //preciate it pyth
                 });
