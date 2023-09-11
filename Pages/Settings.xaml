@@ -1,0 +1,32 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Apollo_Hoster.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="Apollo_Hoster.Pages.Settings"
+      mc:Ignorable="d"
+      Title="Settings" Width="700" Height="360">
+
+    <Grid x:Name="background" Background="#FF111215">
+        <StackPanel Margin="15,107,575,23">
+            <RadioButton Content="Red" Name="rbOption1" Checked="rbOption1_Checked" IsChecked="{Binding Option1IsChecked}"/>
+            <RadioButton Content="Blue" Name="rbOption2" Checked="rbOption2_Checked" IsChecked="{Binding Option2IsChecked}"/>
+            <RadioButton Content="Purple" Name="rbOption3" Checked="rbOption3_Checked" IsChecked="{Binding Option3IsChecked}"/>
+            <RadioButton Content="Neon" x:Name="rbOption4" Checked="rbOption4_Checked" IsChecked="{Binding Option3IsChecked}"/>
+            <RadioButton Content="Forest Green" x:Name="rbOption5" Checked="rbOption5_Checked" IsChecked="{Binding Option3IsChecked}"/>
+            <RadioButton Content="Pumpkin" x:Name="rbOption6_Checkedd" Checked="rbOption6_Checked" IsChecked="{Binding Option3IsChecked}"/>
+        </StackPanel>
+        <ui:Button x:Name="Back" Content="Return to home" Margin="15,0,0,0" VerticalAlignment="Top" Icon="ArrowLeft16" Click="Back_Click"/>
+        <Label Content="Theme" HorizontalAlignment="Left" Margin="15,50,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" FontFamily="Segoe UI Semibold"/>
+        <Label Content="Customize the theme of the auto hoster." HorizontalAlignment="Left" Margin="15,83,0,0" VerticalAlignment="Top" FontSize="11">
+            <Label.Foreground>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Label.Foreground>
+            <Label.Background>
+                <SolidColorBrush Opacity="0.5"/>
+            </Label.Background>
+        </Label>
+
+    </Grid>
+</Page>

@@ -1,0 +1,50 @@
+﻿<Window x:Name="windowmain" x:Class="Apollo_Hoster.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:ui2="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:local="clr-namespace:Apollo_Hoster"
+        ui:WindowHelper.UseModernWindowStyle="True"
+        mc:Ignorable="d"
+        Title="AutoHoster" Height="393" BorderBrush="{Binding Background, ElementName=windowmain}" Width="700"
+        ui:TitleBar.Foreground="LightSlateGray"
+        ui:TitleBar.Background="{Binding Background, ElementName=windowmain}"
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFFFFF" Closed="windowmain_Closed">
+
+    <Grid x:Name="MainGrid" Background="#FF001017">
+        <Border CornerRadius="5" Background="#0FFFFFFF" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="274" Width="680">
+            <Border BorderBrush="#12FFFFFF" BorderThickness="1" CornerRadius="5">
+                <!-- Add a white border here -->
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBlock x:Name="Logger" TextWrapping="Wrap" FontSize="11">
+                        <TextBlock.Background>
+                            <SolidColorBrush Opacity="1"/>
+                        </TextBlock.Background>
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="#FF5D6065" Opacity="1"/>
+                        </TextBlock.Foreground>
+                <!-- Your text content goes here -->
+                    </TextBlock>
+                </ScrollViewer>
+            </Border>
+        </Border>
+
+        <ui2:Button x:Name="Solos" Content="Start Solos" Margin="49,319,0,0" VerticalAlignment="Top" Width="111" Click="Solos_Click"/>
+        <ui2:Button x:Name="Duos" Content="Start Duos" Margin="165,319,0,0" VerticalAlignment="Top" Width="111" Click="Duos_Click"/>
+        <ui2:Button x:Name="Squads" Content="Start Squads" Margin="281,319,0,0" VerticalAlignment="Top" Width="111" Foreground="White" Click="Squads_Click"/>
+        <ui2:Button x:Name="settings" Content="" Margin="10,319,0,0" VerticalAlignment="Top" Width="34" Icon="Settings16" Click="settings_Click"/>
+        <CheckBox x:Name="Check" Content="Host multiple servers for solos. duos, etc." Margin="399,325,0,0" VerticalAlignment="Top" Height="16" FontSize="12" Checked="Check_Checked">
+            <CheckBox.Foreground>
+                <SolidColorBrush Color="White" Opacity="0.35"/>
+            </CheckBox.Foreground>
+        </CheckBox>
+        <ui2:TextBox x:Name="Input" Margin="10,279,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#0FFFFFFF" BorderBrush="#12FFFFFF" PlaceholderText="Type '/help' for a list of valid commands" KeyDown="Input_KeyDown">
+            <ui2:TextBox.Foreground>
+                <SolidColorBrush Opacity="1" Color="White"/>
+            </ui2:TextBox.Foreground>
+        </ui2:TextBox>
+        <Frame x:Name="main" Content="" IsHitTestVisible="False" Height="250" VerticalAlignment="Center"/>
+    </Grid>
+</Window>
